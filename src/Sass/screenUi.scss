@@ -1,0 +1,13 @@
+$color-primario: #354BD4;
+$color-secundario: #7062D4;
+$color-negro: #222F3E;
+$color-ligth: #899AAB;
+$color-fondo: #F4F5F7;
+$color-blanco: #fff;
+
+.container-user{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: $color-fondo;
+}

@@ -1,0 +1,149 @@
+$color-primario: #354BD4;
+$color-secundario: #7062D4;
+$color-negro: #222F3E;
+$color-ligth: #899AAB;
+$color-blanco: #fff;
+$roboto: 'Roboto', sans-serif;
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container-prin{
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+.slider{
+  position: relative;
+  text-align: center;
+  background-color: $color-primario;
+
+  img{
+    margin-top: 70px;
+    width: 150px;
+    z-index: 2;
+  }
+}
+
+.login-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .login{
+    max-width: 70%;
+    color: $color-negro;
+    overflow: hidden;
+    h1{
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    .redes-login{
+      margin: 40px 0;
+      width: 100%;
+      height: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .card{
+        width: 30%;
+        height: 100%;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img{
+          width: 17px;
+          height: 17px;
+          background-color: white;
+        }
+      }
+
+      .face{
+        background-color: #3A559F;
+      }
+
+      .google{
+        border: 1px solid $color-ligth;
+      }
+
+      .linkedin{
+        background-color: #0084B1;
+      }
+    }
+    form{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .input-div{
+        position: relative;
+        margin-bottom: 25px;
+        width: 100%;
+
+        input{
+          height: 50px;
+          width: 100%;
+          padding: 0 20px;
+          font-size: 18px;
+          outline: none;
+          border: 1px solid $color-negro;
+          border-radius: 5px;
+
+          &:focus ~ span{
+            padding: 2px 5px;
+            top: -12px;
+            left: 12px;
+            font-size: 13px;
+          }
+        }
+
+        span{
+          position: absolute;
+          top: 15px;
+          left: 20px;
+          transition: 0.5s;
+          pointer-events: none;
+          padding: 0;
+          background-color: $color-blanco;
+        }
+      }
+
+      .forget{
+        margin: 0 0 20px auto;
+        cursor: pointer;
+        color: $color-secundario;
+        font-weight: 400;
+      }
+
+      input[type=submit]{
+        background-color: $color-primario;
+        border: none;
+        width: 70%;
+        border-radius: 25px;
+        margin: 0 auto 40px auto;
+        padding: 15px 20px;
+        font-weight: 700;
+        color: $color-blanco;
+      }
+    }
+    > p{
+      text-align: center;
+      span{
+        color: $color-secundario;
+        font-weight: 400;
+      }
+    }
+  }
+}
+

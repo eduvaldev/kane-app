@@ -1,0 +1,81 @@
+$color-primario: #354BD4;
+$color-secundario: #7062D4;
+$color-negro: #222F3E;
+$color-ligth: #899AAB;
+$color-blanco: #fff;
+$roboto: 'Roboto', sans-serif;
+
+.nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 265px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-blanco;
+  z-index: 3;
+
+  .container-menu{
+    height: 90%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+
+    .group-menu{
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+      height: 56px;
+      padding: 20px 15px;
+      border-radius: 12px;
+      color: $color-negro;
+      cursor: pointer;
+      transition: 0.5s ease-in-out;
+
+      &:hover{
+        color: $color-secundario;
+
+        path{
+          fill: $color-secundario;
+        }
+      }
+
+      path{
+        fill: $color-ligth;
+        transition: 0.5s ease-in-out;
+      }
+
+      h1{
+        margin-left: 20px;
+      }
+
+      p{
+        font-size: 14px;
+        margin-left: 20px;
+      }
+    }
+
+    .active{
+      background-color: $color-secundario;
+      color: $color-blanco;
+
+      &:hover{
+        color: $color-blanco;
+
+        path{
+          fill: $color-blanco;
+        }
+      }
+
+      path{
+        fill: $color-blanco;
+      }
+    }
+
+    .configuracion{
+      margin-top: auto ;
+    }
+  }
+}

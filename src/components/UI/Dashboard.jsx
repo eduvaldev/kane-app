@@ -1,4 +1,7 @@
 import React from 'react';
+//graficos y slider
+import BarGrafic from './BarGrafic';
+import SliderPrice from "./SliderPrice";
 //estilos
 import '../../Sass/dashboard.scss';
 //imagen
@@ -11,6 +14,7 @@ import Presentacion from '../../Assets/img/presentacion.png'
 
 
 const Dashboard = () => {
+
   return ( 
     <div className="dashboard">
       <h3>¡Hola Liliana, así van tus programas!</h3>
@@ -75,12 +79,10 @@ const Dashboard = () => {
               <p>Ganacias totales</p>
             </div>
             <div className="grafico">
-              Grafico
+              <BarGrafic />
             </div>
           </div>
-          <div className="slider-price">
-            Slider price
-          </div>
+          <SliderPrice />
         </div>
         <div className="options">
           <div>

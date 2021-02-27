@@ -26,9 +26,12 @@ $roboto: 'Roboto', sans-serif;
   background-color: $color-primario;
 
   img{
+    position: absolute;
     margin-top: 70px;
+    top: 0;
+    left: 45%;
     width: 150px;
-    z-index: 2;
+    z-index: 200;
   }
 }
 

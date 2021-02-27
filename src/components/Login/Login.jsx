@@ -1,4 +1,8 @@
 import React from 'react';
+
+//import SLIDER
+import SliderLog from './SliderLog'
+
 //import estilos y logo
 import Logo from '../../Assets/img/logo.svg';
 import Face from '../../Assets/img/facebook.svg';
@@ -11,6 +15,7 @@ const Login = () => {
     <div className="container-prin">
       <div className='slider'>
         <img src={Logo} alt=""/>
+        <SliderLog />
       </div>
       <div className="login-container">
         <div className="login">

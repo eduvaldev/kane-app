@@ -133,10 +133,12 @@ $roboto: 'Roboto', sans-serif;
     margin-bottom: 30px;
 
     .ganancias{
+      position: relative;
       width: 70%;
       border-radius: 20px;
       background-color: $color-blanco;
       padding: 35px 32px;
+      overflow: hidden;
 
       .title-filter{
         width: 100%;
@@ -205,7 +207,6 @@ $roboto: 'Roboto', sans-serif;
         height: 143px;
         display: flex;
         align-items: center;
-        justify-content: center;
       }
     }
 

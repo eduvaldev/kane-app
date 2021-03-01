@@ -6,6 +6,9 @@ $color-ligth: #899AAB;
 $color-notificacion-verde: #10AC84;
 $color-notificacion-azul: #54A0FF;
 $color-blanco: #fff;
+$breakpoint-1: 1270px;
+$breakpoint-2: 1050px;
+$breakpoint-3: 950px;
 $breakpoint-tablet: 768px;
 
 .navTop{
@@ -432,10 +435,17 @@ $breakpoint-tablet: 768px;
   opacity: 1;
 }
 
-@media ( max-width: $breakpoint-tablet){
+@media ( max-width: $breakpoint-1){
   .navTop{
-    padding: 0 39px 0 13%;
+    padding: 0 39px 0 20%;
   }
+
+  .action__menu--notification {
+    max-height: 315px;
+  }
+}
+
+@media ( max-width: $breakpoint-2){
 
   .action__menu--help {
     left: -210px;
@@ -447,6 +457,17 @@ $breakpoint-tablet: 768px;
 
   .action__menu--notification {
     left: -185px;
-    max-height: 315px;
+  }
+}
+
+@media ( max-width: $breakpoint-3){
+  .navTop{
+    padding: 0 39px 0 15%;
+  }
+}
+
+@media ( max-width: $breakpoint-tablet){
+  .navTop{
+    padding: 0 39px 0 13%;
   }
 }

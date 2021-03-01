@@ -4,6 +4,7 @@ $color-negro: #222F3E;
 $color-ligth: #899AAB;
 $color-blanco: #fff;
 $roboto: 'Roboto', sans-serif;
+$breakpoint-3: 950px;
 $breakpoint-tablet: 768px;
 
 .nav{
@@ -80,6 +81,48 @@ $breakpoint-tablet: 768px;
     }
     svg{
       fill: $color-blanco !important;
+    }
+  }
+}
+
+@media ( max-width: $breakpoint-3){
+  .nav{
+    max-width: 13%;
+    height: 100vh;
+    overflow: hidden;
+
+    &__menu{
+      width: 56px;
+    }
+
+    &__item{
+      justify-content: center;
+      margin-bottom: 0;
+    }
+
+    &__item--title{
+      min-height: 100px;
+      align-items: flex-start;
+
+      &::before{
+        position: absolute;
+        bottom: 5px;
+        display: block;
+        font-size: 32px;
+        font-weight: 700;
+      }
+    }
+
+    &__title{
+      display: none;
+      &::before{
+        content: 'P';
+        display: block;
+      }
+    }
+
+    &__texto{
+      display: none;
     }
   }
 }

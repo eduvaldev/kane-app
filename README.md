@@ -126,6 +126,6 @@
             <li>React hooks</li>
             <li>Redux</li>
             <li>Redux hooks</li>
-            <li>SASS (Metodologia BEM)</li>
+            <li>SASS (Flex, Grid y Metodologia BEM)</li>
         </ul>
 </div>

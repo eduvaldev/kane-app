@@ -112,6 +112,12 @@
     <img src='https://user-images.githubusercontent.com/62915251/109442629-bd583880-7a06-11eb-9169-0d5ea4d90478.png'></img>
 </div>
 
+<h1>DEPLOY</h1>
+
+<p>
+    Puede ver la aplicacion en el siguiente <a href="https://kane-app.netlify.app" rel="nofollow">LINK</a> 
+</p>
+
 <div>
     <h1> TECNOLOGIAS USADAS </h1>
         <h2>FRONTEND</h2>

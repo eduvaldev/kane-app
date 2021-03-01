@@ -1,0 +1,111 @@
+[
+  {
+    "data":{
+
+      "general":{
+        "nombre": "Liliana",
+        "apellido": "Mora",
+        "photo": "URL",
+        "edad": "22",
+        "pais": "colomia"
+      },
+      "estudiantes": {
+        "all":[],
+        "activos": "14",
+        "inactivos": "22",
+        "registrados": "45"
+      },
+      "ganancias": [
+        {
+          "mes": "Octubre",
+          "total": "629.75",
+          "nuevos": "60",
+          "recurrentes": "40"
+        },
+        {
+          "mes": "Noviembre",
+          "total": "270.18",
+          "nuevos": "21",
+          "recurrentes": "15"
+        },
+        {
+          "mes": "Diciembre",
+          "total": "485.35",
+          "nuevos": "46",
+          "recurrentes": "38"
+        },
+        {
+          "mes": "Enero",
+          "total": "482.53",
+          "nuevos": "36",
+          "recurrentes": "29"
+        },
+        {
+          "mes": "Febrero",
+          "total": "323.61",
+          "nuevos": "44",
+          "recurrentes": "38"
+        },
+        {
+          "mes": "Marzo",
+          "total": "704.15",
+          "nuevos": "38",
+          "recurrentes": "50"
+        }
+      ],
+      "cursos":{
+        "activos": "08",
+        "inactivos": "30",
+        "certificados": "20"
+      },
+      "notifications" : [
+        {
+          "icon": "",
+          "title": "Mañana, 3 de Noviembre, 2020",
+          "data": "Lanzamiento feria del libro 4:00PM"
+        },
+        {
+          "icon": "",
+          "title": "2 de Noviembre, 2020",
+          "data": "La  tarea “Ensayo sobre la fotografía” se encuentra pendiente de corrección"
+        },
+        {
+          "icon": "",
+          "title": "1 de Noviembre, 2020",
+          "data": "Tu suscripción se encuentra próxima a vencer."
+        },
+        {
+          "icon": "",
+          "title": "29 de Octubre, 2020",
+          "data": "Ha recibido un nuevo mensaje “Dudas sobre actividad de fotografía”"
+        },
+        {
+          "icon": "",
+          "title": "29 de Octubre, 2020",
+          "data": "Ha recibido un nuevo mensaje “Dudas sobre actividad de fotografía”"
+        },
+        {
+          "icon": "",
+          "title": "29 de Octubre, 2020",
+          "data": "Ha recibido un nuevo mensaje “Dudas sobre actividad de fotografía”"
+        }
+      ],
+      "mensajes" : [
+        {
+          "msg": "msg1"
+        },
+        {
+          "msg": "msg2"
+        },
+        {
+          "msg": "msg3"
+        }
+      ],
+      "oportunidades": "123"
+    },
+    "id": "KANE_Us_01",
+    "correo": "admin01@kane.com",
+    "password": "admin01",
+    "type": "admin"
+  }
+]

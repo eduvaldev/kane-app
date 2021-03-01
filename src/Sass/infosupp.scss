@@ -3,367 +3,450 @@ $color-secundario: #7062D4;
 $color-danger: #EE5253;
 $color-negro: #222F3E;
 $color-ligth: #899AAB;
+$color-notificacion-verde: #10AC84;
+$color-notificacion-azul: #54A0FF;
 $color-blanco: #fff;
+$breakpoint-tablet: 768px;
 
-.container-supp{
+.navTop{
   position: absolute;
   width: 100%;
   height: 58px;
   background-color: $color-blanco;
-  padding: 0 39px 0 304px;
+  padding: 0 39px 0 390px;
   display: flex;
   align-items: center;
   z-index: 3;
 
-  .search{
+  &__search{
     display: flex;
     align-items: center;
-
-    path{
-      fill: $color-ligth;
-    }
-
-    .input-div{
-      position: relative;
-      margin-left: 15px;
-      overflow: hidden;
-
-      input{
-        height: 30px;
-        outline: none;
-        border: none;
-        font-size: 16px;
-      }
-    }
   }
 
-  .option-user{
+  &__icon{
+    fill: $color-ligth;
+  }
+
+  &_options{
     display: flex;
     align-items: center;
     margin-left: auto;
 
-    .alerts{
-      display: flex;
+  }
 
-      .action {
-        position: relative;
+  &__alerts{
+    display: flex;
 
-        div{
-        position: relative;
-        cursor: pointer;
-        .number-notif {
-          top: 0;
-          right: -3px;
-          position: absolute;
-          width: 15px;
-          height: 15px;
-          border-radius: 50%;
-          color: $color-blanco;
-          font-size: 11px;  
-          display: flex ;
-          justify-content: center;
-          align-items: center;
-          }
-        } 
-      }
-
-      .action .menu{
-        position: absolute;
-        width: 436px;
-        top: 65px;
-        padding: 20px;
-        -webkit-box-shadow: 0px 14px 21px 1px rgba(34,47,62,0.49);
-        -moz-box-shadow: 0px 14px 21px 1px rgba(34,47,62,0.49);
-        box-shadow: 0px 14px 21px 1px rgba(34,47,62,0.49);
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-        background-color: $color-blanco;
-        transition: 0.5s;
-        visibility: hidden;
-        opacity: 0;
-
-        &:before{
-          content: '';
-          position: absolute;
-          top: -5px;
-          right: 8px;
-          width: 20px;
-          height: 20px;
-          transform: rotate(45deg);
-          background-color: $color-blanco;
-        }
-        h3{
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 20%;
-          font-size: 16px;
-        } 
-        ul{
-          height: 80%;
-          list-style: none;
-
-          li{
-            height: 25%;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-          }
-        }
-        p{
-          font-size: 13px;
-          color: $color-ligth;
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-
-          &:before{
-            font-family: "Font Awesome 5 Free";
-            margin-right: 15px;
-            font-size: 30px;
-          }
-        }
-      }
-
-      .action .help{
-        height: 327px;
-        left: -410px;
-        display: grid;
-        grid-template-columns: auto auto;
-
-        .recursos{
-          color: $color-secundario;
-        }
-
-        .soporte{
-          color: $color-danger;
-        }
-
-        .tutorials:before{
-          content: '\f1c8';
-        }
-
-        .faq:before{
-          content: '\f128';
-          font-weight: bold;
-        }
-
-        .web:before{
-          content: '\f51c';
-          font-weight: bold;
-        }
-
-        .users:before{
-          content: '\f0c0';
-          font-weight: bold;
-        }
-
-        .chat:before{
-          content: '\f4ad';
-        }
-
-        .req:before{
-          content: '\f2b9';
-        }
-
-        .sale:before{
-          content: '\f58f';
-          font-weight: bold;
-        }
-
-        .bug:before{
-          content: '\f717';
-          font-weight: bold;
-        }
-      }
-
-      .action .notification-down{
-        max-height: 535px;
-        left: -375px;
-
-        .h3__notification{
-          justify-content: flex-start;
-          color: $color-danger;
-          margin-bottom: 30px;
-        }
-        & > div{
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          max-height: 435px;
-          padding-top: 25px;
-          overflow: auto;
-
-          
-
-          .div__area__notif{
-            width: 334px;
-            min-height: 69px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: 0.3s linear;
-            margin-bottom: 30px;
-            border-bottom: 1px solid $color-ligth;
-
-            &:hover{
-              background-color: #E9EFF5;
-            }
-
-            .div__info__notif{
-              width: 80%;
-            }
-          }
-        }
-      }
-
-      .action .active{
-        top: 45px;
-        visibility: visible;
-        opacity: 1;
-      }
-
-      .mid{
-        margin: 0 30px;
-        p{
-          background-color: #10AC84;
-        }
-      }
-
-      .last p{
-        background-color: #54A0FF;
-      }
-
-      svg{
-        fill: $color-ligth;
-        color: $color-ligth;
-      }
-    }
-
-
-    .info-user{
-      position: relative;
-      margin-left: 40px;
-      display: flex ;
-      align-items: center;
-      cursor: pointer;
-
-      img{
-        width: 39px;
-        height: 39px;
-      }
-
+    .mid{
+      margin: 0 30px;
       p{
-        color: $color-negro;
-        margin: 0 20px 0 10px;
-        font-weight: 700;
-      }
-
-      path{
-        fill: $color-ligth;
-      }
-
-      .div__user__detail{
-        height: 250px;
-        width: 200px;
-        left: 25px;
-        top: 65px;
-
-        p{
-          transition: 0.3s linear;
-          &:hover{
-            color: $color-secundario;
-          }
-        }
-
-        .p__my:before{
-          content: '\f007';
-          font-size: 16px;
-        }
-
-        .p__plan:before{
-          content: '\f26c';
-          font-size: 16px;
-        }
-
-        .p__admin:before{
-          content: '\f500';
-          font-size: 16px;
-        }
-
-        .p__notific:before{
-          content: '\f0a1';
-          font-size: 16px;
-        }
-
-        .p__salir:before{
-          content: '\f2f6';
-          font-size: 16px;
-        }
-      }
-
-      .active{
-        top: 52px;
-        visibility: visible;
-        opacity: 1;
+        background-color: #10AC84;
       }
     }
-    .menu{
+
+    .last p{
+      background-color: #54A0FF;
+    }
+
+    svg{
+      fill: $color-ligth;
+      color: $color-ligth;
+    }
+  }
+
+  &__user{
+    position: relative;
+    margin-left: 40px;
+    display: flex ;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__img{
+    width: 39px;
+    height: 39px;
+  }
+  
+  &__nombre{
+    color: $color-negro;
+    margin: 0 20px 0 10px;
+    font-weight: 700;
+  }
+
+}
+
+.formNav{
+  position: relative;
+
+  &__container-input{
+    position: relative;
+    margin-left: 15px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  &__input{
+    height: 30px;
+    outline: none;
+    border: none; 
+    font-size: 16px;
+    color: $color-negro;
+  }
+
+  &__busqueda{
+    position: absolute;
+    top: 34px;
+    left: -30px;
+    width: 300px; 
+    padding: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    -webkit-box-shadow: 0px 14px 21px 1px rgba(34,47,62,0.49);
+    -moz-box-shadow: 0px 14px 21px 1px rgba(34,47,62,0.49);
+    box-shadow: 0px 14px 21px 1px rgba(34,47,62,0.49);
+    background-color: $color-blanco;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &__busqueda--activa{
+    top: 44px;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__lista{
+    list-style: none;
+  }
+}
+
+.action {
+  position: relative;
+
+  &__box{
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__number {
+    top: 0;
+    right: -3px;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    color: $color-blanco;
+    font-size: 11px;  
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__number--verde{
+    background-color: $color-notificacion-verde;
+  }
+
+  &__number--azul{
+    background-color: $color-notificacion-azul;
+  }
+
+  &__menu{
+    position: absolute;
+    width: 436px;
+    top: 65px;
+    padding: 20px;
+    -webkit-box-shadow: 0px 14px 21px 1px rgba(34,47,62,0.49);
+    -moz-box-shadow: 0px 14px 21px 1px rgba(34,47,62,0.49);
+    box-shadow: 0px 14px 21px 1px rgba(34,47,62,0.49);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: $color-blanco;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+
+    &:before{
+      content: '';
       position: absolute;
-      width: 436px;
-      top: 65px;
-      padding: 20px;
-      -webkit-box-shadow: 0px 14px 21px 1px rgba(34,47,62,0.49);
-      -moz-box-shadow: 0px 14px 21px 1px rgba(34,47,62,0.49);
-      box-shadow: 0px 14px 21px 1px rgba(34,47,62,0.49);
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
+      top: -5px;
+      right: 8px;
+      width: 20px;
+      height: 20px;
+      transform: rotate(45deg);
       background-color: $color-blanco;
-      transition: 0.5s;
-      visibility: hidden;
-      opacity: 0;
+    }
+    h3{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 20%;
+      font-size: 16px;
+    } 
+    p{
+      font-size: 13px;
+      color: $color-ligth;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
 
       &:before{
-        content: '';
-        position: absolute;
-        top: -5px;
-        right: 8px;
-        width: 20px;
-        height: 20px;
-        transform: rotate(45deg);
-        background-color: $color-blanco;
-      }
-      h3{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 20%;
-        font-size: 16px;
-      } 
-      ul{
-        height: 80%;
-        list-style: none;
-
-        li{
-          height: 25%;
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-        }
-      }
-      p{
-        font-size: 13px;
-        color: $color-ligth;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-
-        &:before{
-          font-family: "Font Awesome 5 Free";
-          margin-right: 15px;
-          font-size: 30px;
-        }
+        font-family: "Font Awesome 5 Free";
+        margin-right: 15px;
+        font-size: 30px;
       }
     }
+  }
+  
+  &__menu--help{
+    height: 327px;
+    left: -410px;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+
+  &__menu--notification{
+    max-height: 535px;
+    left: -375px;
+    overflow: auto;
+  }
+
+  &__titleNotf{
+    justify-content: flex-start !important;
+    color: $color-danger;
+    margin-bottom: 30px;
+  }
+
+
+  &__menu--active{
+    top: 45px;
+    visibility: visible;
+    opacity: 1;
+  }
+  
+}
+
+.grid{
+
+  &__title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    font-size: 16px;
+  }
+  
+  &__title--violet{
+    color: $color-secundario;
+  }
+
+  &__title--danger{
+    color: $color-danger;
+  }
+  
+  &__list{
+    height: 80%;
+    list-style: none;
+  }
+
+  &__item{
+    height: 25%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__text{
+    font-size: 13px;
+    color: $color-ligth;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &:before{
+      font-family: "Font Awesome 5 Free";
+      margin-right: 15px;
+      font-size: 30px;
+    }
+  }
+
+  &__text--tutorials:before{
+    content: '\f1c8';
+  }
+
+  &__text--faq:before{
+    content: '\f128';
+    font-weight: bold;
+  }
+
+  &__text--web:before{
+    content: '\f51c';
+    font-weight: bold;
+  }
+
+  &__text--users:before{
+    content: '\f0c0';
+    font-weight: bold;
+  }
+
+  &__text--chat:before{
+    content: '\f4ad';
+  }
+
+  &__text--req:before{
+    content: '\f2b9';
+  }
+
+  &__text--sale:before{
+    content: '\f58f';
+    font-weight: bold;
+  }
+
+  &__text--bug:before{
+    content: '\f717';
+    font-weight: bold;
+  }
+}
+    
+.notifications{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 435px;
+  padding-top: 25px;
+  
+  &__individual{
+    width: 334px;
+    min-height: 69px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s linear;
+    margin-bottom: 30px;
+    border-bottom: 1px solid $color-ligth;
+
+    &:hover{
+      background-color: #E9EFF5;
+    }
+  }
+
+  &__text{
+    width: 80%;
+  }
+}
+
+.user{
+  position: absolute;
+  padding: 20px;
+  height: 250px;
+  width: 200px;
+  right: 0;
+  top: 65px;
+  -webkit-box-shadow: 0px 14px 21px 1px rgba(34,47,62,0.49);
+  -moz-box-shadow: 0px 14px 21px 1px rgba(34,47,62,0.49);
+  box-shadow: 0px 14px 21px 1px rgba(34,47,62,0.49);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: $color-blanco;
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+
+  &:before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 8px;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    background-color: $color-blanco;
+  }
+
+  &__lista{
+    height: 80%;
+    list-style: none;
+  }
+
+  &__item{
+    height: 25%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__text{
+    font-size: 13px;
+    color: $color-ligth;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: 0.3s linear;
+
+    &:hover, &:hover:before{
+      color: $color-secundario;
+    }
+
+    &:before{
+      font-family: "Font Awesome 5 Free";
+      font-weight: bold;
+      margin-right: 15px;
+      font-size: 30px;
+      color: $color-ligth;
+      transition: 0.3s linear;
+    }
+  }
+
+  &__text--my:before{
+    content: '\f007';
+    font-size: 16px;
+  }
+
+  &__text--plan:before{
+    content: '\f26c' !important;
+    font-size: 16px;
+    color: $color-ligth;
+  }
+
+  &__text--admin:before{
+    content: '\f500';
+    font-size: 16px;
+  }
+
+  &__text--notific:before{
+    content: '\f0a1';
+    font-size: 16px;
+  }
+
+  &__text--salir:before{
+    content: '\f2f6';
+    font-size: 16px;
+  }
+}
+
+
+.active{
+  top: 52px;
+  visibility: visible;
+  opacity: 1;
+}
+
+@media ( max-width: $breakpoint-tablet){
+  .navTop{
+    padding: 0 39px 0 13%;
+  }
+
+  .action__menu--help {
+    left: -210px;
+  }
+
+  .action__menu:before {
+    right: 205px;
+  }
+
+  .action__menu--notification {
+    left: -185px;
+    max-height: 315px;
   }
 }

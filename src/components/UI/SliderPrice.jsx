@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useSelector } from "react-redux";
 //estilos
 import '../../Sass/sliderprice.scss';
 
 const SliderPrice = () => {
 
+  const user = useSelector(state => state.data);
   const [active, setActive] = useState('');
   const [Check1, setCheck1] = useState(true);
   const [Check2, setCheck2] = useState(false);
@@ -19,28 +21,20 @@ const SliderPrice = () => {
       setActive('div__slider__price__active');
     }
   }
-
+  
   return (  
     <>
-    <div className={`slider-price div__slider__price ${active}`}>
-      <div className="div__cont__slider">
-
-      </div>
-      <div className="div__cont__slider">
-        
-      </div>
-      <div className="div__cont__slider">
-        
-      </div>
-      <div className="div__cont__slider">
-        
-      </div>
-      <div className="div__cont__slider">
-        
-      </div>
-      <div className="div__cont__slider">
-        
-      </div>
+    <div className={`options__box-bot div__slider__price ${active}`}>
+      {
+        user.ganancias.map( (mount, i) => {
+          return(
+            <div key={i} className="div__cont__slider">
+              <h4>{mount.mes}</h4>
+              <h2>{`$ ${mount.total}`}</h2>
+            </div>
+          )
+        })
+      }
     </div>
     <div className="div__check__btn">
         <input 

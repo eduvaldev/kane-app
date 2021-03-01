@@ -1,52 +1,4 @@
-
 $color-blanco: #fff;
-
-
-
-.div__slider__cont{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-
-  .div__cont__all{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-color: red;
-
-    .img__slider{
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      margin-top: 0;
-    }
-
-    .div__title__slider{
-      position: absolute;
-      bottom: 10%;
-      left: 0;
-      z-index: 3;
-      color: $color-blanco;
-
-      h2{
-        font-size: 35px;
-        margin-bottom: 15px;
-      }
-
-      p{
-        margin: 0 auto;
-        font-size: 16px;
-        width: 80%;
-      }
-    }
-  }
-}
 
 .awssld {
   --slider-height-percentage: 80%;
@@ -63,11 +15,58 @@ $color-blanco: #fff;
   --loader-bar-color: #851515;
   --loader-bar-height: 6px;
 }
-
 .awssld__container{
   height: 100vh;
 }
-
 .awssld__controls button{
   visibility: hidden;
+}
+.awssld__bullets{
+  bottom: 20px;
+  z-index: 5;
+}
+
+
+.slider__container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.sliderImg{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  &__img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    margin-top: 0;
+  }
+
+  &__text{
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    z-index: 3;
+    color: $color-blanco;
+  }
+
+  &__title{
+    font-size: 35px;
+    margin-bottom: 15px;
+  }
+
+  &__parrafo{
+    margin: 0 auto;
+    font-size: 16px;
+    width: 80%;
+  }
 }

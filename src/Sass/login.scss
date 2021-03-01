@@ -1,5 +1,6 @@
 $color-primario: #354BD4;
 $color-secundario: #7062D4;
+$color-error: #EE5253;
 $color-negro: #222F3E;
 $color-ligth: #899AAB;
 $color-blanco: #fff;
@@ -13,19 +14,20 @@ $roboto: 'Roboto', sans-serif;
   font-family: 'Poppins', sans-serif;
 }
 
-.container-prin{
+.containerLogin{
   width: 100%;
   height: 100vh;
+  max-height: 100vh;
   display: grid;
   grid-template-columns: 60% 40%;
+  overflow: hidden;
 }
 
 .slider{
   position: relative;
   text-align: center;
-  background-color: $color-primario;
 
-  img{
+  &__logo{
     position: absolute;
     margin-top: 70px;
     top: 0;
@@ -35,118 +37,206 @@ $roboto: 'Roboto', sans-serif;
   }
 }
 
-.login-container{
+.login{
   display: flex;
   justify-content: center;
   align-items: center;
 
-  .login{
+  &__info{
     max-width: 70%;
     color: $color-negro;
     overflow: hidden;
-    h1{
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 15px;
-    }
-    .redes-login{
-      margin: 40px 0;
-      width: 100%;
-      height: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+  }
 
-      .card{
-        width: 30%;
-        height: 100%;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+  &__title{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  &__subtitle{
+    text-align: start;
+  }
+  
+  &__lastmsg{
+    text-align: center;
+  }
 
-        img{
-          width: 17px;
-          height: 17px;
-          background-color: white;
-        }
-      }
-
-      .face{
-        background-color: #3A559F;
-      }
-
-      .google{
-        border: 1px solid $color-ligth;
-      }
-
-      .linkedin{
-        background-color: #0084B1;
-      }
-    }
-    form{
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-
-      .input-div{
-        position: relative;
-        margin-bottom: 25px;
-        width: 100%;
-
-        input{
-          height: 50px;
-          width: 100%;
-          padding: 0 20px;
-          font-size: 18px;
-          outline: none;
-          border: 1px solid $color-negro;
-          border-radius: 5px;
-
-          &:focus ~ span{
-            padding: 2px 5px;
-            top: -12px;
-            left: 12px;
-            font-size: 13px;
-          }
-        }
-
-        span{
-          position: absolute;
-          top: 15px;
-          left: 20px;
-          transition: 0.5s;
-          pointer-events: none;
-          padding: 0;
-          background-color: $color-blanco;
-        }
-      }
-
-      .forget{
-        margin: 0 0 20px auto;
-        cursor: pointer;
-        color: $color-secundario;
-        font-weight: 400;
-      }
-
-      input[type=submit]{
-        background-color: $color-primario;
-        border: none;
-        width: 70%;
-        border-radius: 25px;
-        margin: 0 auto 40px auto;
-        padding: 15px 20px;
-        font-weight: 700;
-        color: $color-blanco;
-      }
-    }
-    > p{
-      text-align: center;
-      span{
-        color: $color-secundario;
-        font-weight: 400;
-      }
-    }
+  &__register{
+    color: $color-secundario;
+    font-weight: 400;
   }
 }
+
+.card-social{
+  margin: 40px 0;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  &__item{
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+   
+  }
+
+  &__logo{
+    width: 17px;
+    height: 17px;
+    background-color: white;
+  }
+  
+  &__item--face{
+    background-color: #3A559F;
+  }
+  
+  &__item--google{
+    border: 1px solid $color-ligth;
+  }
+  
+  &__item--linkedin{
+    background-color: #0084B1;
+  }
+}
+
+.form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__cont-input{
+    position: relative;
+    margin-bottom: 25px;
+    width: 100%;
+    transition: 0.3s ease;
+  }
+
+  &__input{
+    height: 50px;
+    width: 100%;
+    padding: 0 20px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid $color-negro;
+    border-radius: 5px;
+    transition: 0.3s linear;
+
+    &:focus, &:valid{
+      border: 2px solid $color-secundario;
+
+      &+span{
+        padding: 2px 5px;
+        top: -12px;
+        left: 12px;
+        font-size: 13px;
+        color: $color-secundario;
+      }
+    }
+
+    &:active{
+      border: 1px solid $color-secundario;
+    }
+  }
+
+  &__cont-input--error{
+    margin-bottom: 45px;
+    .form__input{
+
+      border: 1px solid $color-error;
+
+      &:focus, &:valid{
+        border: 2px solid $color-error;
+
+        &+.form__text-help{
+          padding: 2px 5px;
+          top: -12px;
+          left: 12px;
+          font-size: 13px;
+          color: $color-error;
+        }
+      }
+    }
+
+    .form__text-err{
+      position: absolute;
+      bottom: -30px;
+      color: $color-error;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__text-help{
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    transition: 0.5s;
+    pointer-events: none;
+    padding: 0;
+    background-color: $color-blanco;
+
+    &.active{
+      padding: 2px 5px;
+      top: -12px;
+      left: 12px;
+      font-size: 13px;
+    }
+  }
+
+  &__text-err{
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    transition: 0.3s ease;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &__input-eye{
+    &::after{
+      content: '\f06e';
+      position: absolute;
+      right: 15px;
+      top: 12px;
+      font-weight: bold;
+      font-family: "Font Awesome 5 Free";
+      font-size: 26px;
+      color: $color-ligth;
+      cursor: pointer;
+    }
+  }
+
+  &__input-eye--active{
+    &::after{
+      content: '\f070';
+    }
+  }
+
+  &__forget{
+    margin: 0 0 20px auto;
+    cursor: pointer;
+    color: $color-secundario;
+    font-weight: 400;
+  }
+
+  &__submit{
+    background-color: $color-primario;
+    border: none;
+    width: 70%;
+    border-radius: 25px;
+    margin: 0 auto 40px auto;
+    padding: 15px 20px;
+    font-weight: 700;
+    color: $color-blanco;
+    cursor: pointer;
+  }
+}
+
+
 

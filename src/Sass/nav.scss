@@ -4,12 +4,13 @@ $color-negro: #222F3E;
 $color-ligth: #899AAB;
 $color-blanco: #fff;
 $roboto: 'Roboto', sans-serif;
+$breakpoint-tablet: 768px;
 
 .nav{
   position: absolute;
   top: 0;
   left: 0;
-  width: 265px;
+  width: 20%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -17,65 +18,110 @@ $roboto: 'Roboto', sans-serif;
   background-color: $color-blanco;
   z-index: 3;
 
-  .container-menu{
+  &__menu{
     height: 90%;
     width: 80%;
     display: flex;
     flex-direction: column;
 
-    .group-menu{
-      display: flex;
-      align-items: center;
-      margin-bottom: 5px;
-      height: 56px;
-      padding: 20px 15px;
-      border-radius: 12px;
-      color: $color-negro;
-      cursor: pointer;
-      transition: 0.5s ease-in-out;
-
-      &:hover{
-        color: $color-secundario;
-
-        path{
-          fill: $color-secundario;
-        }
-      }
-
-      path{
-        fill: $color-ligth;
-        transition: 0.5s ease-in-out;
-      }
-
-      h1{
-        margin-left: 20px;
-      }
-
-      p{
-        font-size: 14px;
-        margin-left: 20px;
-      }
-    }
-
-    .active{
-      background-color: $color-secundario;
-      color: $color-blanco;
-
-      &:hover{
-        color: $color-blanco;
-
-        path{
-          fill: $color-blanco;
-        }
-      }
-
-      path{
-        fill: $color-blanco;
-      }
-    }
-
-    .configuracion{
+    & .nav__item:last-child{
       margin-top: auto ;
+    }
+  }
+
+  &__item{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    height: 56px;
+    padding: 20px 15px;
+    border-radius: 12px;
+    color: $color-negro;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+
+    &:hover p, &:hover svg{
+      color: $color-secundario;
+
+      path{
+        fill: $color-secundario;
+      }
+    }
+  }
+
+  &__title{
+    margin-left: 20px;
+  }
+
+  &__icono{
+    fill: $color-ligth;
+    transition: 0.5s ease-in-out;
+  }
+
+  &__texto{
+    font-size: 14px;
+    margin-left: 20px;
+  }
+
+  &__item--title{
+    &::before{
+      content: 'P';
+      display: none;
+    }
+  }
+  
+  &__item--active{
+    background-color: $color-secundario;
+    color: $color-blanco;
+    &:hover, &:hover p, &:hover path{
+      color: $color-blanco !important;
+      fill: $color-blanco !important;
+    }
+    svg{
+      fill: $color-blanco !important;
+    }
+  }
+}
+
+@media ( max-width: $breakpoint-tablet){
+  .nav{
+    max-width: 13%;
+    height: 100vh;
+    overflow: hidden;
+
+    &__menu{
+      width: 56px;
+    }
+
+    &__item{
+      justify-content: center;
+      margin-bottom: 0;
+    }
+
+    &__item--title{
+      min-height: 100px;
+      align-items: flex-start;
+
+      &::before{
+        position: absolute;
+        bottom: 5px;
+        display: block;
+        font-size: 32px;
+        font-weight: 700;
+      }
+    }
+
+    &__title{
+      display: none;
+      &::before{
+        content: 'P';
+        display: block;
+      }
+    }
+
+    &__texto{
+      display: none;
     }
   }
 }

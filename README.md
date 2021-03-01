@@ -26,7 +26,7 @@
 </p>
 
 <p>
-    la pagina principal de la aplicacion cuenta con un slider automatico o el cual puedes cambiar mediante los botones de control que estan hubicados en la parte inferior del silider, en la parte derecha cuenta con un login el cual se aplico Material Design al momento de estilizar el componente  
+    la pagina principal de la aplicacion cuenta con un slider automatico en el cual puedes cambiar mediante los botones de control que estan ubicados en la parte inferior del Silider, en la parte derecha cuenta con un login el cual se aplico Material Design al momento de estilizar el componente  
 </p>
 
 <div> 
@@ -38,15 +38,15 @@
 </div>
 
 <p>
-    Si al momento de loguear el usuario o contraseña no se encuentran en el archivo JSON del proyecto el componente no pasara al siguiente componente y mostrara errores como lo indica Material Desing, cuanta con un visualizador de contraseña para ver lo que estoy escriiendo en el campo de contraseña 
+    Si al momento de loguearse el usuario o contraseña no se encuentran en el archivo JSON del proyecto no pasara al siguiente componente y mostrara errores como lo indica Material Desing. Cuanta con un visualizador de contraseña para ver lo que estoy escribiendo en el campo de contraseña 
 </p>
 <div> 
     <img src='https://user-images.githubusercontent.com/62915251/109442612-b8938480-7a06-11eb-97ab-c5d06d9398d3.png'></img>
 </div>
 
 <h4>
-    Para loguear puede ingresar los siguientes datos...  usuaario: admin01@kane.com , contraseña: admin01 
-    Lo redirije al siguiente componente 
+    Para loguearse puede ingresar los siguientes datos...  usuario: admin01@kane.com , contraseña: admin01 
+    Lo redirige al siguiente componente 
 </h4>
 
 
@@ -55,7 +55,7 @@
 </div>
 
 <p>
-  Este componente cuenta con un nav lateral y uno superior en el cual la barra de busqueda se implemento prediccion para buscar mas facil mente las ganancias del usuario por mes segun: nombre del mes, ganancia, estudiantes nuevos y  estudiantes recurrentes.  
+  Este componente cuenta con un nav lateral y uno superior en el cual la barra de busqueda se implemento prediccion para buscar de una forma eficaz las ganancias del usuario por mes segun: nombre del mes, ganancia, estudiantes nuevos y  estudiantes recurrentes.  
 </p>
 
 <div> 
@@ -63,7 +63,7 @@
 </div>
 
 <p>
-  Cuenta con un centro de ayuda el cual cuando es precionado despliega un menu. 
+  Cuenta con un centro de ayuda el cual cuando es presionado despliega un menu. 
 </p>
 
 <div> 
@@ -71,7 +71,7 @@
 </div>
 
 <p>
-  Notificaciones que tiene el indicador de cuantas notificaciones tiene el usuario segun la cantidad que tenga en el JSON en el caso principal el JSON tiene 6 notificaciones, cuando es presionado despliega las notificaciones, si la cantidad de notificaciones supera a 3, se vuelve scrolleable las notificaciones. 
+  Botón de notificaciones que muestra la cantidad de notificaciones de un usuario dependiendo de los datos que hayan dentro del JSON. En este caso, dentro del JSON hay 6 registros. Cuando es presionado, se despliega una ventana dónde se muestran esas notificaciones en detalle, Esta ventana sólo puede mostrar máximo 3 notificaciones. En caso de haber más de 3 notificaciones, se podría navegar mediante scroll para ver las notificaciones restantes.
 </p>
 
 <div> 

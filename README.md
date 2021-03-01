@@ -1,7 +1,7 @@
 <h1>DESAFIO KANE APP</h1>
 
 <div>
-    <img src='https://user-images.githubusercontent.com/62915251/109442611-b7faee00-7a06-11eb-98fc-5d557f4c167a.png'></img>
+    <img src='https://user-images.githubusercontent.com/62915251/109442817-22ac2980-7a07-11eb-93a5-fc0b26cd94a6.png'></img>
 </div>
 
 
@@ -30,18 +30,18 @@
 </p>
 
 <div> 
-    <img src='./ReadmeAssets/kane-app02.png'></img>
+    <img src='https://user-images.githubusercontent.com/62915251/109442821-2475ed00-7a07-11eb-9e1c-9d46b43e10ee.png'></img>
 </div>
 <br>
 <div> 
-    <img src='./ReadmeAssets/kane-app03.png'></img>
+    <img src='https://user-images.githubusercontent.com/62915251/109442611-b7faee00-7a06-11eb-98fc-5d557f4c167a.png'></img>
 </div>
 
 <p>
     Si al momento de loguear el usuario o contraseña no se encuentran en el archivo JSON del proyecto el componente no pasara al siguiente componente y mostrara errores como lo indica Material Desing, cuanta con un visualizador de contraseña para ver lo que estoy escriiendo en el campo de contraseña 
 </p>
 <div> 
-    <img src='./ReadmeAssets/kane-app04.png'></img>
+    <img src='https://user-images.githubusercontent.com/62915251/109442612-b8938480-7a06-11eb-97ab-c5d06d9398d3.png'></img>
 </div>
 
 <h4>
@@ -51,7 +51,7 @@
 
 
 <div> 
-    <img src='./ReadmeAssets/kane-app05.png'></img>
+    <img src='https://user-images.githubusercontent.com/62915251/109442613-b92c1b00-7a06-11eb-836b-07cc011ff290.png'></img>
 </div>
 
 <p>
@@ -59,7 +59,7 @@
 </p>
 
 <div> 
-    <img src='./ReadmeAssets/kane-app06.png'></img>
+    <img src='https://user-images.githubusercontent.com/62915251/109442614-b92c1b00-7a06-11eb-8170-a54890c8a32e.png'></img>
 </div>
 
 <p>
@@ -67,7 +67,7 @@
 </p>
 
 <div> 
-    <img src='./ReadmeAssets/kane-app07.png'></img>
+    <img src='https://user-images.githubusercontent.com/62915251/109442616-b9c4b180-7a06-11eb-82fb-c03acf4af78b.png'></img>
 </div>
 
 <p>
@@ -75,7 +75,7 @@
 </p>
 
 <div> 
-    <img src='./ReadmeAssets/kane-app08.png'></img>
+    <img src='https://user-images.githubusercontent.com/62915251/109442619-b9c4b180-7a06-11eb-9202-14b48c7acf91.png'></img>
 </div>
 
 <p>
@@ -83,7 +83,7 @@
 </p>
 
 <div> 
-    <img src='./ReadmeAssets/kane-app09.png'></img>
+    <img src='https://user-images.githubusercontent.com/62915251/109442621-ba5d4800-7a06-11eb-8834-d0372ea6cfea.png'></img>
 </div>
 
 <p>
@@ -91,7 +91,7 @@
 </p>
 
 <div> 
-    <img src='./ReadmeAssets/kane-app10.png'></img>
+    <img src='https://user-images.githubusercontent.com/62915251/109442625-bb8e7500-7a06-11eb-93cf-68eddbb8d8f0.png'></img>
 </div>
 
 <p>
@@ -99,7 +99,7 @@
 </p>
 
 <div> 
-    <img src='./ReadmeAssets/kane-app11.png'></img>
+    <img src='https://user-images.githubusercontent.com/62915251/109442626-bc270b80-7a06-11eb-9df2-a60f00928ea8.png'></img>
 </div>
 
 <h1>RESPONSIVE</h1>
@@ -109,7 +109,7 @@
 </p>
 
 <div> 
-    <img src='./ReadmeAssets/kane-app12.png'></img>
+    <img src='https://user-images.githubusercontent.com/62915251/109442629-bd583880-7a06-11eb-9169-0d5ea4d90478.png'></img>
 </div>
 
 <div>
